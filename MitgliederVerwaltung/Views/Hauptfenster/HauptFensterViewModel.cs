@@ -17,6 +17,7 @@ namespace MitgliederVerwaltung.Views.Hauptfenster
         }
 
         public HauptFensterViewModel()
+        //test
         {
             _changeNameCommand = new DelegateCommand(OnChangeName,CanChangeName);
         }
