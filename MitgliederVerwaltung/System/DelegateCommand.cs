@@ -12,7 +12,7 @@ namespace MitgliederVerwaltung
         private readonly Action<object> _executeAction;
         private readonly Func<object, bool> _canExecuteAction;
 
-        public DelegateCommand(Action<object> executeAction, Func<object, bool> canExecuteAction)
+        public DelegateCommand(Action<object> executeAction, Func<object, bool> canExecuteAction )
         {
             _executeAction = executeAction;
             _canExecuteAction = canExecuteAction;
@@ -24,6 +24,9 @@ namespace MitgliederVerwaltung
 
         public event EventHandler CanExecuteChanged;
 
-        public void InvokeCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        public void InvokeCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

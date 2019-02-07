@@ -6,25 +6,29 @@ namespace MitgliederVerwaltung.Views.Hauptfenster
     {
 
         private readonly DelegateCommand _changeNameCommand;
-        public ICommand ChangeNameCommand => _changeNameCommand;
-
+        public ICommand ChangeNameCommand
+        {
+            get
+            {
+                return _changeNameCommand;
+            }
+        }
 
         private string _name;
         public string Name
         {
-            get { return _name; }
+            get { return _name ; }
             set { SetProperty(ref _name, value); }
         }
 
         public HauptFensterViewModel()
-        //test
         {
-            _changeNameCommand = new DelegateCommand(OnChangeName,CanChangeName);
+            _changeNameCommand = new DelegateCommand( OnChangeName,CanChangeName);
         }
 
         private bool CanChangeName(object commandParameter)
         {
-            return Name != "Drölf";
+            return true;
         }
 
         private void OnChangeName(object commandParameter)

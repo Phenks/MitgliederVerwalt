@@ -168,7 +168,7 @@ namespace MitgliederVerwaltung.Annotations
   ///
   ///   string _name;
   /// 
-  ///   public string Name {
+  ///   public string Vorname {
   ///     get { return _name; }
   ///     set { _name = value; NotifyChanged("LastName"); /* Warning */ }
   ///   }

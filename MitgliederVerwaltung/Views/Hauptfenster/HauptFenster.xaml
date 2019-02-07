@@ -12,9 +12,11 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Text="{Binding Path=Name}"  FontSize="26" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <Button Grid.Column="1" Command="{Binding Path=ChangeNameCommand}" Content="ChangeName"></Button>
+        <Button Grid.Column="1" Command="{Binding Path=ChangeNameCommand}" Content="ChangeVorname"></Button>
     </Grid>
 </Window>
