@@ -1,5 +1,6 @@
 ﻿using System;
-using MitgliederVerwaltung.System;
+using MitgliederVerwaltung.Basis;
+using MitgliederVerwaltung.Basis;
 
 namespace MitgliederVerwaltung.Objekte
 {

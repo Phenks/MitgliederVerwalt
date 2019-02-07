@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MitgliederVerwaltung.System
+﻿namespace MitgliederVerwaltung.Basis
 {
     public static class  Konstanten
     {
