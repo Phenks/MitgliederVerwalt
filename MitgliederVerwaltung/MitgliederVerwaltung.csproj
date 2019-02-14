@@ -70,6 +70,17 @@
     <Compile Include="Basis\DelegateCommand.cs" />
     <Compile Include="Basis\Konstanten.cs" />
     <Compile Include="Basis\ViewModelBasis.cs" />
+    <Compile Include="Views\Mitgliederansicht\MitgliederUebersicht.xaml.cs">
+      <DependentUpon>MitgliederUebersicht.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Mitgliederansicht\MitgliederUebersichtViewModel.cs" />
+    <Compile Include="Views\Simulation\Simulation.xaml.cs">
+      <DependentUpon>Simulation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simulation\SimulationViewModel.cs" />
+    <Compile Include="Views\Vereinskonto\Vereinskonto.xaml.cs">
+      <DependentUpon>Vereinskonto.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\Hauptfenster\HauptFenster.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -83,6 +94,18 @@
       <DependentUpon>HauptFenster.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Mitgliederansicht\MitgliederUebersicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Simulation\Simulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Vereinskonto\Vereinskonto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\Annotations.cs" />
@@ -112,5 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

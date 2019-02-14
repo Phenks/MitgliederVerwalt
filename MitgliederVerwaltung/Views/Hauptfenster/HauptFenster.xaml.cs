@@ -15,5 +15,7 @@ namespace MitgliederVerwaltung.Views.Hauptfenster
             
             InitializeComponent();
         }
+
+        
     }
 }

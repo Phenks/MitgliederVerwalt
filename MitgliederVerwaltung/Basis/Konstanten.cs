@@ -1,4 +1,6 @@
-﻿namespace MitgliederVerwaltung.Basis
+﻿using System.Windows;
+
+namespace MitgliederVerwaltung.Basis
 {
     public static class  Konstanten
     {
@@ -15,6 +17,11 @@
             Berufstaetig,
             Arbeitslos,
             Rentner
+        }
+
+        public class UI
+        {
+            public static GridLength AktionsmenueHoehe = new GridLength(40);
         }
     }
 }

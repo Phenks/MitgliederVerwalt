@@ -1,6 +1,5 @@
 ﻿using System.Windows.Input;
 using MitgliederVerwaltung.Basis;
-using MitgliederVerwaltung.Basis;
 
 namespace MitgliederVerwaltung.Views.Hauptfenster
 {
