@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 
 namespace MitgliederVerwaltung.Basis 
 {
-    class ViewModelBasis : INotifyPropertyChanged
+    public class ViewModelBasis : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MitgliederVerwaltung.Views.Mitgliederansicht
+namespace MitgliederVerwaltung.Views.Mitglied
 {
     /// <summary>
-    /// Interaction logic for MitgliederUebersicht.xaml
+    /// Interaction logic for MitgliedView.xaml
     /// </summary>
-    public partial class MitgliederUebersicht : UserControl
+    public partial class MitgliedView : UserControl
     {
-        public MitgliederUebersicht()
+        public MitgliedView(Objekte.Mitglied mitglied)
         {
-            DataContext = new MitgliederUebersichtViewModel();
+            DataContext = new MitgliedViewModel(mitglied);
             InitializeComponent();
         }
     }

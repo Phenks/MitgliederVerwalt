@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MitgliederVerwaltung.Objekte
 {
-    class Transaktion
+    public class Transaktion
     {
         public Konto Empfaenger { get; set; }
         public Konto Sender { get; set; }
