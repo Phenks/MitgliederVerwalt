@@ -2,7 +2,7 @@
 
 namespace MitgliederVerwaltung.Views.MitgliedView
 {
-    internal class MitgliedViewModel
+    public class MitgliedViewModel
     {
         public string Email { get; set; }
         public string Geburtsdatum { get; set; }

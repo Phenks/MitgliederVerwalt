@@ -20,7 +20,6 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.RowSpan="3" Grid.ColumnSpan="2" Background="Red"></Border>
         <mitgliederansichtView:MitgliederUebersichtView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,0,594.6,0.4" ></mitgliederansichtView:MitgliederUebersichtView>
         <simulationView:SimulationsView Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0"></simulationView:SimulationsView>
         <vereinskontoView:VereinskontoView Grid.Column="1" Grid.Row="0"></vereinskontoView:VereinskontoView>

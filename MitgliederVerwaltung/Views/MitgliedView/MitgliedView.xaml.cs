@@ -7,9 +7,9 @@ namespace MitgliederVerwaltung.Views.MitgliedView
     /// </summary>
     public partial class MitgliedView : UserControl
     {
-        public MitgliedView(Objekte.Mitglied mitglied)
+        public MitgliedView(MitgliedViewModel viewModel)
         {
-            DataContext = new MitgliedViewModel(mitglied);
+            DataContext = viewModel;
             InitializeComponent();
         }
     }

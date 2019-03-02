@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using MitgliederVerwaltung.Basis;
-using MitgliederVerwaltung.Objekte;
 using MitgliederVerwaltung.Services;
+using MitgliederVerwaltung.Views.MitgliedView;
 
 namespace MitgliederVerwaltung.Views.MitgliederansichtView
 {
     public class MitgliederUebersichtViewModel : ViewModelBasis
     {
-        private List<Mitglied> _mitglieder;
+        private List<MitgliedView.MitgliedView> _mitglieder;
         private string _suchBegriff;
 
-        public List<Mitglied> Mitglieder
+        public List<MitgliedView.MitgliedView> Mitglieder
         {
             get { return _mitglieder; }
             set { SetProperty(ref _mitglieder, value); }
@@ -25,7 +25,8 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
 
         public MitgliederUebersichtViewModel()
         {
-            Mitglieder = new MitgliederService().ErhalteAlleMitglieder();
+            Mitglieder = MitgliederService.Instanz.Mitglieder
+                .Select(mitglied => new MitgliedView.MitgliedView(new MitgliedViewModel(mitglied))).ToList();
         }
     }
 }
