@@ -13,17 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MitgliederVerwaltung.Views.Vereinskonto
+namespace MitgliederVerwaltung.Views.Transaktion
 {
     /// <summary>
-    /// Interaction logic for Vereinskonto.xaml
+    /// Interaction logic for TranskationView.xaml
     /// </summary>
-    public partial class Vereinskonto : UserControl
+    public partial class TranskationView : UserControl
     {
-        public Vereinskonto(Vereinskonto konto)
-        {   
-            
-            DataContext = new VereinskontoViewModel();
+        public TranskationView()
+        {
             InitializeComponent();
         }
     }

@@ -70,6 +70,7 @@
     <Compile Include="Basis\DelegateCommand.cs" />
     <Compile Include="Basis\Konstanten.cs" />
     <Compile Include="Basis\ViewModelBasis.cs" />
+    <Compile Include="Objekte\Verein.cs" />
     <Compile Include="Views\Mitgliederansicht\MitgliederUebersicht.xaml.cs">
       <DependentUpon>MitgliederUebersicht.xaml</DependentUpon>
     </Compile>
@@ -82,9 +83,14 @@
       <DependentUpon>Simulation.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Simulation\SimulationViewModel.cs" />
+    <Compile Include="Views\Transaktion\TransaktionViewModel.cs" />
+    <Compile Include="Views\Transaktion\TranskationView.xaml.cs">
+      <DependentUpon>TranskationView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Vereinskonto\Vereinskonto.xaml.cs">
       <DependentUpon>Vereinskonto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Vereinskonto\VereinskontoViewModel.cs" />
     <Page Include="Views\Hauptfenster\HauptFenster.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +113,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Simulation\Simulation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Transaktion\TranskationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
