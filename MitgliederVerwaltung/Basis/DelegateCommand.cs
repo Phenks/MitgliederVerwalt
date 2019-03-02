@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace MitgliederVerwaltung.Basis
 {
-    class DelegateCommand : ICommand
+    public class DelegateCommand : ICommand
     {
         private readonly Action<object> _executeAction;
         private readonly Func<object, bool> _canExecuteAction;

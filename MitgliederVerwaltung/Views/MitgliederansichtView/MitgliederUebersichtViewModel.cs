@@ -11,6 +11,8 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
         private List<MitgliedView.MitgliedView> _mitglieder;
         private string _suchBegriff;
 
+        public DelegateCommand UserHinzufuegen{ get; set; }
+
         public List<MitgliedView.MitgliedView> Mitglieder
         {
             get { return _mitglieder; }
@@ -27,6 +29,15 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
         {
             Mitglieder = MitgliederService.Instanz.Mitglieder
                 .Select(mitglied => new MitgliedView.MitgliedView(new MitgliedViewModel(mitglied))).ToList();
+
+            UserHinzufuegen = new DelegateCommand(o => OnUserHinzufuegenKlick());
         }
+
+        public void OnUserHinzufuegenKlick()
+        {
+            var mitgliedAnlegen = new MitgliederBearbeitenView();
+            mitgliedAnlegen.Show();
+        }
+        
     }
 }

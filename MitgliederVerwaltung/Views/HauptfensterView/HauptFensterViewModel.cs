@@ -1,19 +1,13 @@
 ﻿using System.Windows.Input;
 using MitgliederVerwaltung.Basis;
+using MitgliederVerwaltung.Views.MitgliedView;
 
 namespace MitgliederVerwaltung.Views.HauptfensterView
 {
     class HauptFensterViewModel : ViewModelBasis
     {
 
-        private readonly DelegateCommand _changeNameCommand;
-        public ICommand ChangeNameCommand
-        {
-            get
-            {
-                return _changeNameCommand;
-            }
-        }
+        public DelegateCommand UserHinzufuegen { get; set; }
 
         private string _name;
         public string Name
@@ -24,19 +18,15 @@ namespace MitgliederVerwaltung.Views.HauptfensterView
 
         public HauptFensterViewModel()
         {
-            _changeNameCommand = new DelegateCommand( OnChangeName,CanChangeName);
+            UserHinzufuegen = new DelegateCommand( (o => OnUserHinzufuegenKlick()) );
         }
 
-        private bool CanChangeName(object commandParameter)
+        private void OnUserHinzufuegenKlick()
         {
-            return true;
+            new MitgliederBearbeitenView();
         }
 
-        private void OnChangeName(object commandParameter)
-        {
-            Name = "Drölf";
-            _changeNameCommand.InvokeCanExecuteChanged();
-        }
+     
 
         
     }
