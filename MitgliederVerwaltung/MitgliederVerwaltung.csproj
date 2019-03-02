@@ -75,6 +75,9 @@
       <DependentUpon>MitgliederUebersicht.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtViewModel.cs" />
+    <Compile Include="Views\MitgliedView\MitgliederBearbeitenView.xaml.cs">
+      <DependentUpon>MitgliederBearbeitenView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MitgliedView\MitgliedView.xaml.cs">
       <DependentUpon>MitgliedView.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\MitgliederansichtView\MitgliederUebersicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MitgliedView\MitgliederBearbeitenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
