@@ -2,11 +2,11 @@
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Objekte;
 
-namespace MitgliederVerwaltung.Views.Vereinskonto
+namespace MitgliederVerwaltung.Views.VereinskontoView
 {
     public class VereinskontoViewModel : ViewModelBasis
     {
-        public List<TransaktionView> Transaktionen { get; set; }
+        public List<Transaktion> Transaktionen { get; set; }
 
         public VereinskontoViewModel(Konto konto)
         {

@@ -1,13 +1,13 @@
 ﻿using System.Windows;
 
-namespace MitgliederVerwaltung.Views.Hauptfenster
+namespace MitgliederVerwaltung.Views.HauptfensterView
 {
     /// <summary>
-    /// Interaction logic for HauptFenster.xaml
+    /// Interaction logic for HauptFensterView.xaml
     /// </summary>
-    public partial class HauptFenster : Window
+    public partial class HauptFensterView : Window
     {
-        public HauptFenster()
+        public HauptFensterView()
         {
             var viewModel = new HauptFensterViewModel();
             viewModel.Name = "Test";

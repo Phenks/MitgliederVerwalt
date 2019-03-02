@@ -1,7 +1,7 @@
 ﻿using System.Windows.Input;
 using MitgliederVerwaltung.Basis;
 
-namespace MitgliederVerwaltung.Views.Hauptfenster
+namespace MitgliederVerwaltung.Views.HauptfensterView
 {
     class HauptFensterViewModel : ViewModelBasis
     {

@@ -1,4 +1,6 @@
-﻿namespace MitgliederVerwaltung.Views.Mitglied
+﻿using MitgliederVerwaltung.Objekte;
+
+namespace MitgliederVerwaltung.Views.MitgliedView
 {
     internal class MitgliedViewModel
     {
@@ -14,7 +16,7 @@
             get { return Aktiv ? "Aktiv" : "Inaktiv"; }
         }
 
-        public MitgliedViewModel(Objekte.Mitglied mitglied)
+        public MitgliedViewModel(Mitglied mitglied)
         {
             Geburtsdatum = mitglied.Geburtsdatum.ToString("dd-MM-yyyy");
             

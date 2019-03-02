@@ -20,5 +20,6 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Sender}"></TextBlock>
         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Verwendungszweck}"></TextBlock>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Betrag}"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding Timestamp}"></TextBlock>
     </Grid>
 </UserControl>

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MitgliederVerwaltung.Views.Vereinskonto;
+using MitgliederVerwaltung.Views.VereinskontoView;
 
 namespace MitgliederVerwaltung.Objekte
 {
     class Verein
     {
         public List<Mitglied> Mitglieder { get; private set; }
-        public Vereinskonto Konto { get; }
+        public VereinskontoView Konto { get; }
 
-        public Verein(List<Mitglied> mitglieder, Vereinskonto konto)
+        public Verein(List<Mitglied> mitglieder, VereinskontoView konto)
         {
             Mitglieder = mitglieder;
             Konto = konto;

@@ -71,27 +71,28 @@
     <Compile Include="Basis\Konstanten.cs" />
     <Compile Include="Basis\ViewModelBasis.cs" />
     <Compile Include="Objekte\Verein.cs" />
-    <Compile Include="Views\MitgliederansichtView\MitgliederUebersicht.xaml.cs">
-      <DependentUpon>MitgliederUebersicht.xaml</DependentUpon>
+    <Compile Include="Services\MitgliederService.cs" />
+    <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtView.xaml.cs">
+      <DependentUpon>MitgliederUebersichtView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtViewModel.cs" />
     <Compile Include="Views\MitgliedView\MitgliedView.xaml.cs">
       <DependentUpon>MitgliedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MitgliedView\MitgliedViewModel.cs" />
-    <Compile Include="Views\SimulationView\Simulation.xaml.cs">
-      <DependentUpon>Simulation.xaml</DependentUpon>
+    <Compile Include="Views\SimulationView\SimulationsView.xaml.cs">
+      <DependentUpon>SimulationsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SimulationView\SimulationViewModel.cs" />
     <Compile Include="Views\TransaktionView\TransaktionViewModel.cs" />
     <Compile Include="Views\TransaktionView\TranskationView.xaml.cs">
       <DependentUpon>TranskationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\VereinskontoView\Vereinskonto.xaml.cs">
-      <DependentUpon>Vereinskonto.xaml</DependentUpon>
+    <Compile Include="Views\VereinskontoView\VereinskontoView.xaml.cs">
+      <DependentUpon>VereinskontoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VereinskontoView\VereinskontoViewModel.cs" />
-    <Page Include="Views\HauptfensterView\HauptFenster.xaml">
+    <Page Include="Views\HauptfensterView\HauptFensterView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -100,11 +101,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Views\HauptfensterView\HauptFensterViewModel.cs" />
-    <Compile Include="Views\HauptfensterView\HauptFenster.xaml.cs">
-      <DependentUpon>HauptFenster.xaml</DependentUpon>
+    <Compile Include="Views\HauptfensterView\HauptFensterView.xaml.cs">
+      <DependentUpon>HauptFensterView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\MitgliederansichtView\MitgliederUebersicht.xaml">
+    <Page Include="Views\MitgliederansichtView\MitgliederUebersichtView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,7 +113,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\SimulationView\Simulation.xaml">
+    <Page Include="Views\SimulationView\SimulationsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,7 +121,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\VereinskontoView\Vereinskonto.xaml">
+    <Page Include="Views\VereinskontoView\VereinskontoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

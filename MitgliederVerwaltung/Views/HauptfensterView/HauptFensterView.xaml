@@ -1,4 +1,4 @@
-﻿<Window x:Class="MitgliederVerwaltung.Views.Hauptfenster.HauptFenster"
+﻿<Window x:Class="MitgliederVerwaltung.Views.HauptfensterView.HauptFensterView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,11 +6,11 @@
         xmlns:views="clr-namespace:MitgliederVerwaltung.Views"
 
         xmlns:local="clr-namespace:MitgliederVerwaltung"
-        xmlns:mitgliederansicht="clr-namespace:MitgliederVerwaltung.Views.Mitgliederansicht"
-        xmlns:simulationsansicht="clr-namespace:MitgliederVerwaltung.Views.Simulation"
-        xmlns:vereinskonto="clr-namespace:MitgliederVerwaltung.Views.Vereinskonto"
+        xmlns:vereinskontoView="clr-namespace:MitgliederVerwaltung.Views.VereinskontoView"
+        xmlns:simulationView="clr-namespace:MitgliederVerwaltung.Views.SimulationView"
+        xmlns:mitgliederansichtView="clr-namespace:MitgliederVerwaltung.Views.MitgliederansichtView"
         mc:Ignorable="d"
-        Title="HauptFenster" Height="600" Width="1200">
+        Title="HauptFensterView" Height="600" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -21,8 +21,8 @@
             <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
         <Border Grid.RowSpan="3" Grid.ColumnSpan="2" Background="Red"></Border>
-        <mitgliederansicht:MitgliederUebersicht Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,0,594.6,0.4" ></mitgliederansicht:MitgliederUebersicht>
-        <simulationsansicht:Simulation Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0"></simulationsansicht:Simulation>
-        <vereinskonto:Vereinskonto Grid.Column="1" Grid.Row="0"></vereinskonto:Vereinskonto>
+        <mitgliederansichtView:MitgliederUebersichtView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="2,0,594.6,0.4" ></mitgliederansichtView:MitgliederUebersichtView>
+        <simulationView:SimulationsView Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0"></simulationView:SimulationsView>
+        <vereinskontoView:VereinskontoView Grid.Column="1" Grid.Row="0"></vereinskontoView:VereinskontoView>
     </Grid>
 </Window>

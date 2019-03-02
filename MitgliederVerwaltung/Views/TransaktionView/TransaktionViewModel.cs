@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MitgliederVerwaltung.Objekte;
+﻿using MitgliederVerwaltung.Objekte;
 
 
 namespace MitgliederVerwaltung.Views.TransaktionView
@@ -13,12 +8,14 @@ namespace MitgliederVerwaltung.Views.TransaktionView
         public string Sender { get; set; }
         public string Verwendungszweck { get; set; }
         public string Betrag { get; set; }
-
+        public string Timestamp { get; set; }
 
         public TransaktionViewModel(Transaktion transaktion)
         {
             Sender = transaktion.Sender.Inhaber.VollstaendigerName;
             Verwendungszweck = transaktion.Verwendungszweck;
+            Betrag = transaktion.Betrag.ToString();
+            Timestamp = transaktion.Zeitpunkt.ToString("dd-MM-yy HH:mm");
         }
     }
 }

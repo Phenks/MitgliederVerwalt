@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MitgliederVerwaltung.Basis;
+﻿using MitgliederVerwaltung.Basis;
 using DateTime = System.DateTime;
 
-namespace MitgliederVerwaltung.Views.Simulation
+namespace MitgliederVerwaltung.Views.SimulationView
 {
     class SimulationViewModel : ViewModelBasis
     {
