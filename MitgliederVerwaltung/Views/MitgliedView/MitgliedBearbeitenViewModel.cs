@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Objekte;
 using MitgliederVerwaltung.Services;
@@ -45,6 +46,8 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             get { return _strasse; }
             set { SetProperty(ref _strasse, value); }
         }
+
+        public Window Fenster { get; set; }
 
         private string _hausnr;
         public string Hausnr
@@ -95,11 +98,14 @@ namespace MitgliederVerwaltung.Views.MitgliedView
 
         public DelegateCommand Speichern { get; set; }
 
-        public MitgliedBearbeitenViewModel() 
+        public MitgliedBearbeitenViewModel(Window fenster)
         {
+            Fenster = fenster;
+
             Speichern = new DelegateCommand(((o) => OnSpeichernKlick() ));
             Titel = "Mitglied Hinzufügen";
         }
+
 
         public void OnSpeichernKlick()
         {
@@ -113,9 +119,11 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             DateTime myDate = DateTime.ParseExact(Geburtsdatum, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
             var mitglied = new Mitglied(Vorname,Name,myDate,anschrift,Auflistung,konto,Kontakt);
             MitgliederService.Instanz.FuegeMitgliedHinzu(mitglied);
+
+            Fenster.Close();
         }
 
-        public MitgliedBearbeitenViewModel(Mitglied mitglied)
+        public MitgliedBearbeitenViewModel(Mitglied mitglied,Window fenster) : this(fenster)
         {
             Vorname = mitglied.Vorname;
             Name = mitglied.Nachname;

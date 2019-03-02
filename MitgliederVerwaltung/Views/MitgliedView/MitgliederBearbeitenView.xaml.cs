@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MitgliederVerwaltung.Objekte;
 using MitgliederVerwaltung.Services;
 
 namespace MitgliederVerwaltung.Views.MitgliedView
@@ -22,7 +23,13 @@ namespace MitgliederVerwaltung.Views.MitgliedView
     {
         public MitgliederBearbeitenView()
         {
-            DataContext = new MitgliedBearbeitenViewModel();
+            DataContext = new MitgliedBearbeitenViewModel(this);
+            InitializeComponent();
+        }
+
+        public MitgliederBearbeitenView(Mitglied mitglied)
+        {
+            DataContext = new MitgliedBearbeitenViewModel(mitglied,this);
             InitializeComponent();
         }
     }
