@@ -19,6 +19,6 @@
         <Border Background="Gray" Grid.Column="0" Grid.Row="0"></Border>
         <Border Background="LightGray" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"></Border>
         <TextBlock Grid.Column="0" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="23px"   Grid.Row="0" Text="Vereinskonto" FontWeight="Bold" Foreground="#FFF7F7F7" />
-        <TextBlock Grid.Column="0" Grid.Row="1"  Text="25,523€" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" ></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1"  Text="25,523€" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" />
     </Grid>
 </UserControl>
