@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:MitgliederVerwaltung"
              StartupUri="Views/HauptfensterView/HauptFensterView.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Farben.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/Schriftarten.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/Text.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

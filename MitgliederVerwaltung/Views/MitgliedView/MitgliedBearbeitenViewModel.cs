@@ -22,7 +22,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
 
         public DelegateCommand Speichern { get; set; }
 
-        public MitgliedBearbeitenViewModel()
+        public MitgliedBearbeitenViewModel() 
         {
             Speichern = new DelegateCommand(((o) => OnSpeichernKlick() ));
         }

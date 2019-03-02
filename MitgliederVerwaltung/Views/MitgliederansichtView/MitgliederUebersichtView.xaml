@@ -15,11 +15,15 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Border Background="LightGray" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
-        <Border Background="Gray" Grid.ColumnSpan="3"></Border>
+        <Border Background="{StaticResource HintergrundBasisBrush}" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
+        <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.ColumnSpan="3"></Border>
         
-        <TextBox Text="Suchen ... " Margin="6" Grid.Column="0" Grid.Row="0" FontSize="18" ></TextBox>
-        
+        <TextBox  Style="{StaticResource BasisTextBox}" Text="Suchen ... "  Grid.Column="0" Grid.Row="0" FontSize="18" ></TextBox>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+            <Button Width="50" Margin="5" Background="Transparent">
+                <Image  Source="/Bilder/add-circle-512.png"></Image>
+            </Button>
+        </StackPanel>
 
         <ItemsControl ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <ItemsControl.ItemsPanel>
