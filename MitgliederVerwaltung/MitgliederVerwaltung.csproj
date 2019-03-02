@@ -71,27 +71,27 @@
     <Compile Include="Basis\Konstanten.cs" />
     <Compile Include="Basis\ViewModelBasis.cs" />
     <Compile Include="Objekte\Verein.cs" />
-    <Compile Include="Views\Mitgliederansicht\MitgliederUebersicht.xaml.cs">
+    <Compile Include="Views\MitgliederansichtView\MitgliederUebersicht.xaml.cs">
       <DependentUpon>MitgliederUebersicht.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Mitgliederansicht\MitgliederUebersichtViewModel.cs" />
-    <Compile Include="Views\Mitglied\MitgliedView.xaml.cs">
+    <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtViewModel.cs" />
+    <Compile Include="Views\MitgliedView\MitgliedView.xaml.cs">
       <DependentUpon>MitgliedView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Mitglied\MitgliedViewModel.cs" />
-    <Compile Include="Views\Simulation\Simulation.xaml.cs">
+    <Compile Include="Views\MitgliedView\MitgliedViewModel.cs" />
+    <Compile Include="Views\SimulationView\Simulation.xaml.cs">
       <DependentUpon>Simulation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Simulation\SimulationViewModel.cs" />
-    <Compile Include="Views\Transaktion\TransaktionViewModel.cs" />
-    <Compile Include="Views\Transaktion\TranskationView.xaml.cs">
+    <Compile Include="Views\SimulationView\SimulationViewModel.cs" />
+    <Compile Include="Views\TransaktionView\TransaktionViewModel.cs" />
+    <Compile Include="Views\TransaktionView\TranskationView.xaml.cs">
       <DependentUpon>TranskationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Vereinskonto\Vereinskonto.xaml.cs">
+    <Compile Include="Views\VereinskontoView\Vereinskonto.xaml.cs">
       <DependentUpon>Vereinskonto.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Vereinskonto\VereinskontoViewModel.cs" />
-    <Page Include="Views\Hauptfenster\HauptFenster.xaml">
+    <Compile Include="Views\VereinskontoView\VereinskontoViewModel.cs" />
+    <Page Include="Views\HauptfensterView\HauptFenster.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -99,28 +99,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Views\Hauptfenster\HauptFensterViewModel.cs" />
-    <Compile Include="Views\Hauptfenster\HauptFenster.xaml.cs">
+    <Compile Include="Views\HauptfensterView\HauptFensterViewModel.cs" />
+    <Compile Include="Views\HauptfensterView\HauptFenster.xaml.cs">
       <DependentUpon>HauptFenster.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\Mitgliederansicht\MitgliederUebersicht.xaml">
+    <Page Include="Views\MitgliederansichtView\MitgliederUebersicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Mitglied\MitgliedView.xaml">
+    <Page Include="Views\MitgliedView\MitgliedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Simulation\Simulation.xaml">
+    <Page Include="Views\SimulationView\Simulation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Transaktion\TranskationView.xaml">
+    <Page Include="Views\TransaktionView\TranskationView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Vereinskonto\Vereinskonto.xaml">
+    <Page Include="Views\VereinskontoView\Vereinskonto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

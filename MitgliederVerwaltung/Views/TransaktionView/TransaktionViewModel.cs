@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MitgliederVerwaltung.Objekte;
 
-namespace MitgliederVerwaltung.Views.Transaktion
+
+namespace MitgliederVerwaltung.Views.TransaktionView
 {
     class TransaktionViewModel
     {
@@ -13,7 +15,7 @@ namespace MitgliederVerwaltung.Views.Transaktion
         public string Betrag { get; set; }
 
 
-        public TransaktionViewModel(Objekte.Transaktion transaktion)
+        public TransaktionViewModel(Transaktion transaktion)
         {
             Sender = transaktion.Sender.Inhaber.VollstaendigerName;
             Verwendungszweck = transaktion.Verwendungszweck;

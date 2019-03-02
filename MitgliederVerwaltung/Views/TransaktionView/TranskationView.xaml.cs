@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MitgliederVerwaltung.Views.Transaktion
+namespace MitgliederVerwaltung.Views.TransaktionView
 {
     /// <summary>
     /// Interaction logic for TranskationView.xaml
