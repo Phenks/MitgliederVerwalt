@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MitgliederVerwaltung">
+    
+    <Color x:Key="HintergrundBasis" >#ffffff</Color>
+    <SolidColorBrush x:Key="HintergrundBasisBrush" Color="{StaticResource HintergrundBasis}" ></SolidColorBrush>
+    <Color x:Key="HintergrundAkzent">#2980b9</Color>
+    <SolidColorBrush x:Key="HintergrundAkzentBrush" Color="{StaticResource HintergrundAkzent}" ></SolidColorBrush>
+
+
+    <Color x:Key="VordergrundBasis">#7f8c8d</Color>
+    <SolidColorBrush x:Key="VordergrundBasisBrush" Color="{StaticResource VordergrundBasis}" ></SolidColorBrush>
+    <Color x:Key="VordergrundSehrHell">#ffffff</Color>
+    <SolidColorBrush x:Key="VordergrundSehrHellBrush" Color="{StaticResource VordergrundSehrHell}" ></SolidColorBrush>
+
+</ResourceDictionary>

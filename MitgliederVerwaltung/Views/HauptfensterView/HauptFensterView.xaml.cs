@@ -9,13 +9,15 @@ namespace MitgliederVerwaltung.Views.HauptfensterView
     {
         public HauptFensterView()
         {
-            var viewModel = new HauptFensterViewModel();
-            viewModel.Name = "Test";
-            DataContext = viewModel;
-            
+           
+            DataContext = new HauptFensterViewModel();
+
             InitializeComponent();
         }
 
-        
+        private void MitgliederUebersichtView_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

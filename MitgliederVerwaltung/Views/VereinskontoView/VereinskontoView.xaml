@@ -15,11 +15,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Background="Gray" Grid.Column="0" Grid.Row="0"></Border>
-        <Border Background="LightGray" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"></Border>
-        <TextBlock Grid.Column="0" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="23px"   Grid.Row="0" Text="VereinskontoView" FontWeight="Bold" Foreground="#FFF7F7F7" />
-        <TextBlock Grid.Column="0" Grid.Row="1"  Text="25,523€" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" ></TextBlock>
-        <TextBlock Grid.Column="0" Grid.Row="2"  Text="Transaktionen" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" ></TextBlock>
+        <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.Column="0" Grid.Row="0"></Border>
+        <Border Background="{StaticResource HintergrundBasisBrush}" Grid.Column="0" Grid.Row="1" Grid.RowSpan="3"></Border>
+        <TextBlock Grid.Column="0"  Style="{StaticResource HeaderTextBlock}"  Grid.Row="0" Text="Vereinskonto" />
+        <TextBlock Grid.Column="0" Grid.Row="1"  Text="25,523€" Style="{StaticResource HeaderTextBlock}" Foreground="Black" ></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2"  Text="Transaktionen"  Style="{StaticResource HeaderTextBlock}" Foreground="Black" ></TextBlock>
         <ItemsControl ItemsSource="{Binding Path=Transaktionen}" Grid.Row="3" Grid.Column="0">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>

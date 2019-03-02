@@ -96,6 +96,18 @@
       <DependentUpon>VereinskontoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VereinskontoView\VereinskontoViewModel.cs" />
+    <Page Include="Styles\Farben.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Schriftarten.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Text.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\HauptfensterView\HauptFensterView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -158,10 +170,30 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Resource Include="Schriftarten\Lato-Black.ttf" />
+    <Resource Include="Schriftarten\Lato-BlackItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Bold.ttf" />
+    <Resource Include="Schriftarten\Lato-BoldItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Hairline.ttf" />
+    <Resource Include="Schriftarten\Lato-HairlineItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Heavy.ttf" />
+    <Resource Include="Schriftarten\Lato-HeavyItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Italic.ttf" />
+    <Resource Include="Schriftarten\Lato-Light.ttf" />
+    <Resource Include="Schriftarten\Lato-LightItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Medium.ttf" />
+    <Resource Include="Schriftarten\Lato-MediumItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Regular.ttf" />
+    <Resource Include="Schriftarten\Lato-Semibold.ttf" />
+    <Resource Include="Schriftarten\Lato-SemiboldItalic.ttf" />
+    <Resource Include="Schriftarten\Lato-Thin.ttf" />
+    <Resource Include="Schriftarten\Lato-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Bilder\add-circle-512.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,8 +13,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Grid.ColumnSpan="2" Background="White"></Border>
-        <TextBlock   FontSize="23px"  VerticalAlignment="Center" Grid.Column="0" Text="{Binding Path=Datum}" Margin="10,0,0,0"></TextBlock>
+        <Border Grid.ColumnSpan="2" Background="{StaticResource HintergrundAkzentBrush}"></Border>
+        <TextBlock  Style="{StaticResource HeaderTextBlock}" Grid.Column="0" Text="{Binding Path=Datum}" Margin="10,0,0,0"></TextBlock>
         <StackPanel  Orientation="Horizontal"  Grid.Column="1">
             <StackPanel.Resources>
                 <Style TargetType="Button">
@@ -23,7 +23,6 @@
                     <Setter Property="HorizontalAlignment" Value="Center"></Setter>
                     <Setter Property="VerticalAlignment" Value="Center"></Setter>
                     <Setter Property="FontSize" Value="18px"></Setter>
-
                 </Style>
             </StackPanel.Resources>
             <Button Content="Test" ></Button>
