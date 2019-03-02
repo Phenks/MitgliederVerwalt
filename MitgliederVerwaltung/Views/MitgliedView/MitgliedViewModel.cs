@@ -4,14 +4,9 @@
     {
         public string Email { get; set; }
         public string Geburtsdatum { get; set; }
-        private string Nachname { get; }
 
-        public string Name
-        {
-            get { return $"{Vorname} {Nachname}"; }
-        }
+        public string Name { get; set; }
 
-        private string Vorname { get; }
         private bool Aktiv { get; set; }
 
         public string Mitgliedstatus
@@ -22,10 +17,10 @@
         public MitgliedViewModel(Objekte.Mitglied mitglied)
         {
             Geburtsdatum = mitglied.Geburtsdatum.ToString("dd-MM-yyyy");
-            Vorname = mitglied.Vorname;
-            Nachname = mitglied.Nachname;
+            
             Email = mitglied.Email;
             Aktiv = mitglied.Aktiv;
+            Name = mitglied.VollstaendigerName;
         }
     }
 }

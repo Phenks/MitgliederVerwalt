@@ -20,8 +20,10 @@ namespace MitgliederVerwaltung.Views.Vereinskonto
     /// </summary>
     public partial class Vereinskonto : UserControl
     {
-        public Vereinskonto()
-        {
+        public Vereinskonto(Vereinskonto konto)
+        {   
+            
+            DataContext = new VereinskontoViewModel();
             InitializeComponent();
         }
     }

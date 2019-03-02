@@ -10,6 +10,12 @@ namespace MitgliederVerwaltung.Objekte
     {
         public string Vorname { get; set; }
         public string Nachname { get; set; }
+
+        public string VollstaendigerName
+        {
+            get { return $"{Vorname} {Nachname}"; }
+        }
+
         public DateTime Geburtsdatum { get; set; }
         public Anschrift Anschrift { get; set; }
 
