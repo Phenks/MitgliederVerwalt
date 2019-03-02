@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Objekte;
+using MitgliederVerwaltung.Services;
 
 namespace MitgliederVerwaltung.Views.MitgliederansichtView
 {
@@ -24,8 +25,7 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
 
         public MitgliederUebersichtViewModel()
         {
-           
-           
+            Mitglieder = new MitgliederService().ErhalteAlleMitglieder();
         }
     }
 }
