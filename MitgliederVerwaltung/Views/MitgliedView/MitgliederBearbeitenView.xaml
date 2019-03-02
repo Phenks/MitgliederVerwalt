@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MitgliederVerwaltung.Views.MitgliedView"
         mc:Ignorable="d"
-        Title="MitgliederBearbeitenView" Height="450" Width="800">
+        Title="MitgliederBearbeitenView" Height="200" Width="600">
 
     <StackPanel Orientation="Vertical">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Margin" Value="0,5,10,0"/>
+            </Style>
+        </StackPanel.Resources>
         <StackPanel Orientation="Horizontal">
             <Label Content="Vorname" Width="100"></Label>
             <TextBox Text="" Width="150"></TextBox>
@@ -22,7 +27,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Beitritt" Width="100"></Label>
-            <DatePicker Width="150"></DatePicker>
+            <DatePicker Width="150" Margin="0,5,10,0"></DatePicker>
             <Label Content="Kontakt" Width="100"></Label>
             <TextBox Text="" Width="150"></TextBox>
         </StackPanel>
@@ -31,6 +36,10 @@
             <TextBox Text="" Width="150"></TextBox>
             <Label Content="Hausnr" Width="100"></Label>
             <TextBox Text="" Width="150"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Margin="350,15,5,0">Speichern</Button>
+            <Button Margin="0,15,5,0">Abbrechen</Button>
         </StackPanel>
     </StackPanel>
 </Window>
