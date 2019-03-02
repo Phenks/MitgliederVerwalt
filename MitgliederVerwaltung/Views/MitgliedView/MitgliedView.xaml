@@ -26,7 +26,5 @@
         <TextBlock Text="12.52 €" Grid.Row="0" Grid.Column="4" ></TextBlock>
         <Button Content="Bearbeiten"  Grid.Row="0" Grid.Column="5" ></Button>
         <Button Content="Info"  Grid.Row="0" Grid.Column="6" ></Button>
-
-
     </Grid>
 </UserControl>

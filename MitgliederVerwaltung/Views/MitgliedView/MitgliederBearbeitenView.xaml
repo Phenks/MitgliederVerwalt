@@ -15,7 +15,7 @@
         </StackPanel.Resources>
         <StackPanel Orientation="Horizontal">
             <Label Content="Vorname" Width="100"></Label>
-            <TextBox Text="" Width="150"></TextBox>
+            <TextBox Text="{Binding Vorname}" Width="150"></TextBox>
             <Label Content="Name" Width="100"></Label>
             <TextBox Text="" Width="150"></TextBox>
         </StackPanel>
@@ -38,7 +38,7 @@
             <TextBox Text="" Width="150"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Button Margin="350,15,5,0">Speichern</Button>
+            <Button Command="{Binding Speichern}"  Margin="350,15,5,0">Speichern</Button>
             <Button Margin="0,15,5,0">Abbrechen</Button>
         </StackPanel>
     </StackPanel>

@@ -76,6 +76,7 @@
       <DependentUpon>MitgliederUebersichtView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtViewModel.cs" />
+    <Compile Include="Views\MitgliedView\MitgliedBearbeitenViewModel.cs" />
     <Compile Include="Views\MitgliedView\MitgliederBearbeitenView.xaml.cs">
       <DependentUpon>MitgliederBearbeitenView.xaml</DependentUpon>
     </Compile>

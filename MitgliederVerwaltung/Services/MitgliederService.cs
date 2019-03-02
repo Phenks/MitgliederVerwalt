@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Objekte;
 
@@ -16,20 +12,24 @@ namespace MitgliederVerwaltung.Services
         public static MitgliederService Instanz
         {
             get { return _instanz ?? (_instanz = new MitgliederService()); }
-
         }
 
-        public List<Mitglied> Mitglieder { get; private set; }
+        public List<Mitglied> Mitglieder { get; }
 
         private MitgliederService()
         {
             Mitglieder = new List<Mitglied>();
-            InitialisiereMitglieder(); 
+            InitialisiereMitglieder();
+        }
+
+
+        public void FuegeMitgliedHinzu(Mitglied mitglied)
+        {
+            Mitglieder.Add(mitglied);
         }
 
         private void InitialisiereMitglieder()
         {
-
             Random random = new Random(42);
 
             Mitglieder.Add(
@@ -40,17 +40,10 @@ namespace MitgliederVerwaltung.Services
 
             Mitglieder.Add(
                 new Mitglied("Jonas ", "Herz", new DateTime(1999, 5, 24),
-                    new Anschrift("82243", "Fürstenfeldbruck", "Prager Str", "14"), Konstanten.Erwerbstaetigkeiten.Student,
+                    new Anschrift("82243", "Fürstenfeldbruck", "Prager Str", "14"),
+                    Konstanten.Erwerbstaetigkeiten.Student,
                     new Konto(random.Next(25, 13000)), "JonasHerz@cuvox.de")
             );
         }
-       
-
-        public void FuegeMitgliedHinzu(Mitglied mitglied)
-        {
-            Mitglieder.Add(mitglied);
-        }
-
-
     }
 }

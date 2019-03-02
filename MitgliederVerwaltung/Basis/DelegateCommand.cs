@@ -12,6 +12,13 @@ namespace MitgliederVerwaltung.Basis
         {
             _executeAction = executeAction;
             _canExecuteAction = canExecuteAction;
+
+
+        }
+        public DelegateCommand(Action<object> executeAction )
+        {
+            _executeAction = executeAction;
+            _canExecuteAction = (o) => true;
         }
 
         public void Execute(object parameter) => _executeAction(parameter);
