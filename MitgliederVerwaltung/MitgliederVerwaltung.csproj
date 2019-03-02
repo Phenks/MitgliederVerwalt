@@ -78,9 +78,6 @@
       <DependentUpon>MitgliedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Mitglied\MitgliedViewModel.cs" />
-    <Compile Include="Views\Mitglied\MitgliedBearbeitenView.xaml.cs">
-      <DependentUpon>MitgliedBearbeitenView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Simulation\Simulation.xaml.cs">
       <DependentUpon>Simulation.xaml</DependentUpon>
     </Compile>
@@ -106,10 +103,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Mitglied\MitgliedView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Mitglied\MitgliedBearbeitenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -19,7 +19,7 @@ namespace MitgliederVerwaltung.Views.Simulation
 
         public SimulationViewModel()
         {
-            var datum = DateTime.Now;
+            var datum =new DateTime(2019,03,2);
             Datum = datum.ToString("D");
         }
 
