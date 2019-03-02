@@ -4,9 +4,12 @@
     
     <Color x:Key="HintergrundBasis" >#ffffff</Color>
     <SolidColorBrush x:Key="HintergrundBasisBrush" Color="{StaticResource HintergrundBasis}" ></SolidColorBrush>
+    <Color x:Key="HintergrundDunkel" >#ecf0f1</Color>
+    <SolidColorBrush x:Key="HintergrundDunkelBrush" Color="{StaticResource HintergrundDunkel}" ></SolidColorBrush>
     <Color x:Key="HintergrundAkzent">#2980b9</Color>
     <SolidColorBrush x:Key="HintergrundAkzentBrush" Color="{StaticResource HintergrundAkzent}" ></SolidColorBrush>
-
+    <Color x:Key="HintergrundAkzentHell">#3498db</Color>
+    <SolidColorBrush x:Key="HintergrundAkzentHellBrush" Color="{StaticResource HintergrundAkzentHell}" ></SolidColorBrush>
 
     <Color x:Key="VordergrundBasis">#7f8c8d</Color>
     <SolidColorBrush x:Key="VordergrundBasisBrush" Color="{StaticResource VordergrundBasis}" ></SolidColorBrush>

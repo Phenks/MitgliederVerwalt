@@ -13,14 +13,14 @@
         Title="Vereinsverwaltung" Height="600" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="40"></RowDefinition>
         </Grid.RowDefinitions>
-        <mitgliederansichtView:MitgliederUebersichtView Grid.Row="0" Grid.Column="0" Loaded="MitgliederUebersichtView_Loaded"></mitgliederansichtView:MitgliederUebersichtView>
+        <mitgliederansichtView:MitgliederUebersichtView Grid.Row="0" Grid.Column="0" ></mitgliederansichtView:MitgliederUebersichtView>
         <simulationView:SimulationsView Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="0"></simulationView:SimulationsView>
         <vereinskontoView:VereinskontoView Grid.Column="1" Grid.Row="0"></vereinskontoView:VereinskontoView>
     </Grid>

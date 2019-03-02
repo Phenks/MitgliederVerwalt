@@ -4,27 +4,30 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="800">
+             d:DesignWidth="1000"
+             Height="50"
+             Margin="4"
+             >
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Border Background="White" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6"></Border>
-        <TextBlock Text="{Binding Path=Name}" Grid.Row="0" Grid.Column="0" ></TextBlock>
-        <TextBlock Text="{Binding Path=Geburtsdatum}" Grid.Row="0" Grid.Column="1" ></TextBlock>
-        <TextBlock Text="{Binding Path=Email}" Grid.Row="0" Grid.Column="2" ></TextBlock>
-        <TextBlock Text="{Binding Path=Mitgliedstatus}" Grid.Row="0" Grid.Column="3" ></TextBlock>
-        <TextBlock Text="12.52 €" Grid.Row="0" Grid.Column="4" ></TextBlock>
-        <Button Content="Bearbeiten"  Grid.Row="0" Grid.Column="5" ></Button>
-        <Button Content="Info"  Grid.Row="0" Grid.Column="6" ></Button>
+        <Border CornerRadius="10" Background="{StaticResource HintergrundDunkelBrush}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7"></Border>
+        <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Name}" Grid.Row="0" Grid.Column="0" ></TextBlock>
+        <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Geburtsdatum}" Grid.Row="0" Grid.Column="1" ></TextBlock>
+        <TextBlock Style="{StaticResource BasisTextBlock}"  Text="{Binding Path=Email}" Grid.Row="0" Grid.Column="2" ></TextBlock>
+        <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Mitgliedstatus}" Grid.Row="0" Grid.Column="3" ></TextBlock>
+        <TextBlock Style="{StaticResource BasisTextBlock}" Text="12.52 €" Grid.Row="0" Grid.Column="4" ></TextBlock>
+        <Button Margin="0" Style="{StaticResource TextButton}" Content="Bearbeiten"  Grid.Row="0" Grid.Column="5" ></Button>
+        <Button Margin="0" Style="{StaticResource TextButton}" Content="Info"  Grid.Row="0" Grid.Column="6" ></Button>
     </Grid>
 </UserControl>

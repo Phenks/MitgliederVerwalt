@@ -37,6 +37,7 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
         {
             var mitgliedAnlegen = new MitgliederBearbeitenView();
             mitgliedAnlegen.Show();
+
         }
         
     }
