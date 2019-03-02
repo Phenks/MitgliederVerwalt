@@ -96,6 +96,10 @@
       <DependentUpon>VereinskontoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VereinskontoView\VereinskontoViewModel.cs" />
+    <Page Include="Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Farben.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

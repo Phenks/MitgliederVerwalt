@@ -25,10 +25,12 @@
             </Button>
         </StackPanel>
 
-        <ItemsControl ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+        <ItemsControl Margin="5" ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical"/>
+                    <StackPanel Orientation="Vertical">
+
+                    </StackPanel>
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
         </ItemsControl>

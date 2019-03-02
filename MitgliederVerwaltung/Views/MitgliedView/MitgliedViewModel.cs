@@ -9,19 +9,15 @@ namespace MitgliederVerwaltung.Views.MitgliedView
 
         public string Name { get; set; }
 
-        private bool Aktiv { get; set; }
 
-        public string Mitgliedstatus
-        {
-            get { return Aktiv ? "Aktiv" : "Inaktiv"; }
-        }
+        public string Mitgliedstatus { get; set; }
 
         public MitgliedViewModel(Mitglied mitglied)
         {
             Geburtsdatum = mitglied.Geburtsdatum.ToString("dd-MM-yyyy");
             
             Email = mitglied.Email;
-            Aktiv = mitglied.Aktiv;
+            Mitgliedstatus = mitglied.Aktiv ? "Aktiv" : "Inaktiv";
             Name = mitglied.VollstaendigerName;
         }
     }

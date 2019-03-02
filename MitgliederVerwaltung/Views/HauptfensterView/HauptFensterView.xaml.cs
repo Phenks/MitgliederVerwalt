@@ -15,9 +15,6 @@ namespace MitgliederVerwaltung.Views.HauptfensterView
             InitializeComponent();
         }
 
-        private void MitgliederUebersichtView_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
