@@ -103,6 +103,11 @@ namespace MitgliederVerwaltung.Views.MitgliedView
 
         public void OnSpeichernKlick()
         {
+            if (string.IsNullOrWhiteSpace(Vorname) || string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Geburtsdatum) || string.IsNullOrWhiteSpace(Kontakt) || string.IsNullOrWhiteSpace(Strasse) || string.IsNullOrWhiteSpace(Hausnr) || string.IsNullOrWhiteSpace(Plz) || string.IsNullOrWhiteSpace(Ort)) {
+                System.Windows.MessageBox.Show("Es wurden nicht alle Werte eingegeben.", "Abbruch");
+                return;
+            }
+
             var anschrift = new Anschrift(Plz, Ort, Strasse, Hausnr);
             var konto = new Konto(100);
             DateTime myDate = DateTime.ParseExact(Geburtsdatum, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
