@@ -67,6 +67,13 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             set { SetProperty(ref _ort, value); }
         }
 
+        private string _titel;
+        public string Titel
+        {
+            get { return _titel; }
+            set { SetProperty(ref _titel, value); }
+        }
+
         private Konstanten.Erwerbstaetigkeiten _auflistung;
         public Konstanten.Erwerbstaetigkeiten Auflistung
         {
@@ -91,7 +98,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
         public MitgliedBearbeitenViewModel()
         {
             Speichern = new DelegateCommand(((o) => OnSpeichernKlick() ));
-
+            Titel = "Mitglied Hinzufügen";
         }
 
         public void OnSpeichernKlick()
@@ -114,6 +121,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             Hausnr = mitglied.Anschrift.Hausnummer;
             Plz = mitglied.Anschrift.Postleitzahl;
             Ort = mitglied.Anschrift.Ort;
+            Titel = "Mitglied Bearbeiten";
         }
 
     }

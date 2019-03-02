@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MitgliederVerwaltung.Views.MitgliedView"
         mc:Ignorable="d"
-        Title="MitgliederBearbeitenView" Height="250" Width="600">
+        Title="{Binding Titel}" Height="230" Width="600">
 
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical" Margin="10,10,0,0">
         <StackPanel.Resources>
             <Style TargetType="{x:Type TextBox}">
                 <Setter Property="Margin" Value="0,5,10,0"/>
@@ -23,7 +23,7 @@
             <Label Content="Geb.-Datum" Width="100"></Label>
             <TextBox Text="{Binding Geburtsdatum}" Width="150"></TextBox>
             <Label Content="Erwerbstätigkeit" Width="100"></Label>
-            <ComboBox SelectedItem="{Binding Auflistung}" ItemsSource="{Binding MyEnumTypeValues}" Width="150"></ComboBox>
+            <ComboBox SelectedItem="{Binding Auflistung}" ItemsSource="{Binding MyEnumTypeValues}" Width="150" Margin="0,5,10,0"></ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal">
             <Label Content="Beitritt" Width="100"></Label>
