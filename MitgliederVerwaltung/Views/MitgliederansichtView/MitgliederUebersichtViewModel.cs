@@ -29,7 +29,7 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
         public MitgliederUebersichtViewModel()
         {
             MitgliederAktualisieren();   
-            MitgliederService.Instanz.MitgliederUpdated += MitgliederAktualisieren;
+            VereinService.Instanz.MitgliederUpdated += MitgliederAktualisieren;
 
             UserHinzufuegen = new DelegateCommand(o => OnUserHinzufuegenKlick());
 
@@ -38,9 +38,8 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
 
         public void MitgliederAktualisieren()
         {
-            Mitglieder = MitgliederService.Instanz.Mitglieder
+            Mitglieder = VereinService.Instanz.ErhalteMitglieder()
                 .Select(mitglied => new MitgliedView.MitgliedView(new MitgliedViewModel(mitglied))).ToList();
-
         }
 
         public void OnUserHinzufuegenKlick()

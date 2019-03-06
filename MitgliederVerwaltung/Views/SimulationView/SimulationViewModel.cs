@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlTypes;
 using MitgliederVerwaltung.Basis;
+using MitgliederVerwaltung.Services;
 
 namespace MitgliederVerwaltung.Views.SimulationView
 {
@@ -27,14 +28,20 @@ namespace MitgliederVerwaltung.Views.SimulationView
             TagWeiter = new DelegateCommand(o => OnTagWeiter());
             WocheWeiter = new DelegateCommand(o => OnWocheWeiter());
             MonatWeiter = new DelegateCommand(o => OnMonatWeiter());
-            DatumAendern(DateTime.Now);
+            _datum = SimulationsService.Instanz.MomentanesDatum;
+            AktualisiereMomentanesDatumString();
         }
 
         private void DatumAendern(DateTime neuesDatum)
         {
-            _datum = neuesDatum;
-            MomentanesDatum = _datum.ToString("D");
+            int verstricheneTage = (int)(neuesDatum -_datum ).TotalDays ;
+            _datum = SimulationsService.Instanz.SimuliereTage(verstricheneTage);
+            AktualisiereMomentanesDatumString();
+        }
 
+        private void AktualisiereMomentanesDatumString()
+        {
+            MomentanesDatum = _datum.ToString("D");
         }
 
         public void OnTagWeiter()

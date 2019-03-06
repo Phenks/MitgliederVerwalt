@@ -9,8 +9,13 @@ namespace MitgliederVerwaltung.Objekte
 {
     class Verein
     {
-        public List<Mitglied> Mitglieder { get; private set; }
+        public List<Mitglied> Mitglieder { get; set; }
         public VereinskontoView Konto { get; }
+
+        public Verein()
+        {
+            Mitglieder = new List<Mitglied>();
+        }
 
         public Verein(List<Mitglied> mitglieder, VereinskontoView konto)
         {

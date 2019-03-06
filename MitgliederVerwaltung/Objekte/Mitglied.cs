@@ -21,7 +21,8 @@ namespace MitgliederVerwaltung.Objekte
         public Konstanten.Erwerbstaetigkeiten Erwerbstaetigkeit { get; set; }
         public Konto Konto { get; set; }
         public int MitgliedId { get; set; }
-        
+
+       
 
         public Mitglied(string vorname, string nachname, DateTime geburtsdatum, Anschrift anschrift,
             Konstanten.Erwerbstaetigkeiten erwerbstaetigkeit, Konto konto, string email)

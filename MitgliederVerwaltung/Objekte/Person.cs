@@ -18,6 +18,7 @@ namespace MitgliederVerwaltung.Objekte
 
         public DateTime Geburtsdatum { get; set; }
         public Anschrift Anschrift { get; set; }
+        
 
         public Person(string vorname, string nachname, DateTime geburtsdatum, Anschrift anschrift)
         {

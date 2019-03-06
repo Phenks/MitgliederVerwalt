@@ -164,11 +164,11 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             if (IstBearbeitung)
             {
                 mitglied.MitgliedId = MitgliedId;
-                MitgliederService.Instanz.AktualisiereMitglied(mitglied);
+                VereinService.Instanz.AktualisiereMitglied(mitglied);
 
             }
             else
-                MitgliederService.Instanz.FuegeMitgliedHinzu(mitglied);
+                VereinService.Instanz.FuegeMitgliedHinzu(mitglied);
 
             Fenster.Close();
         }

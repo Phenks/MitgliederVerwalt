@@ -71,7 +71,8 @@
     <Compile Include="Basis\Konstanten.cs" />
     <Compile Include="Basis\ViewModelBasis.cs" />
     <Compile Include="Objekte\Verein.cs" />
-    <Compile Include="Services\MitgliederService.cs" />
+    <Compile Include="Services\BankService.cs" />
+    <Compile Include="Services\VereinService.cs" />
     <Compile Include="Services\SimulationsService.cs" />
     <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtView.xaml.cs">
       <DependentUpon>MitgliederUebersichtView.xaml</DependentUpon>
