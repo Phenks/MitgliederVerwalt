@@ -26,8 +26,8 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             set { SetProperty(ref _name, value); }
         }
 
-        private string _geburtsdatum;
-        public string Geburtsdatum
+        private DateTime _geburtsdatum;
+        public DateTime Geburtsdatum
         {
             get { return _geburtsdatum; }
             set { SetProperty(ref _geburtsdatum, value); }
@@ -98,28 +98,37 @@ namespace MitgliederVerwaltung.Views.MitgliedView
 
         public DelegateCommand Speichern { get; set; }
 
+        public DelegateCommand Abbrechen { get; set; }
+
         public MitgliedBearbeitenViewModel(Window fenster)
         {
             Fenster = fenster;
 
             Speichern = new DelegateCommand(((o) => OnSpeichernKlick() ));
+            Abbrechen = new DelegateCommand(((o) => OnAbbrechenKlick() ));
             Titel = "Mitglied Hinzufügen";
+            Geburtsdatum = DateTime.Today;
         }
 
 
         public void OnSpeichernKlick()
         {
-            if (string.IsNullOrWhiteSpace(Vorname) || string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Geburtsdatum) || string.IsNullOrWhiteSpace(Kontakt) || string.IsNullOrWhiteSpace(Strasse) || string.IsNullOrWhiteSpace(Hausnr) || string.IsNullOrWhiteSpace(Plz) || string.IsNullOrWhiteSpace(Ort)) {
+            if (string.IsNullOrWhiteSpace(Vorname) || string.IsNullOrWhiteSpace(Name) || string.IsNullOrWhiteSpace(Kontakt) || string.IsNullOrWhiteSpace(Strasse) || string.IsNullOrWhiteSpace(Hausnr) || string.IsNullOrWhiteSpace(Plz) || string.IsNullOrWhiteSpace(Ort)) {
                 System.Windows.MessageBox.Show("Es wurden nicht alle Werte eingegeben.", "Abbruch");
                 return;
             }
 
             var anschrift = new Anschrift(Plz, Ort, Strasse, Hausnr);
             var konto = new Konto(100);
-            DateTime myDate = DateTime.ParseExact(Geburtsdatum, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            var mitglied = new Mitglied(Vorname,Name,myDate,anschrift,Auflistung,konto,Kontakt);
+            //DateTime myDate = DateTime.ParseExact(Geburtsdatum, "dd.MM.yyyy", System.Globalization.CultureInfo.InvariantCulture);
+            var mitglied = new Mitglied(Vorname,Name,Geburtsdatum,anschrift,Auflistung,konto,Kontakt);
             MitgliederService.Instanz.FuegeMitgliedHinzu(mitglied);
 
+            Fenster.Close();
+        }
+
+        public void OnAbbrechenKlick()
+        {
             Fenster.Close();
         }
 
@@ -127,7 +136,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
         {
             Vorname = mitglied.Vorname;
             Name = mitglied.Nachname;
-            Geburtsdatum = mitglied.Geburtsdatum.ToString("dd.MM.yyyy");
+            Geburtsdatum = mitglied.Geburtsdatum;
             Auflistung = mitglied.Erwerbstaetigkeit;
             Kontakt = mitglied.Email;
             Strasse = mitglied.Anschrift.Strasse;

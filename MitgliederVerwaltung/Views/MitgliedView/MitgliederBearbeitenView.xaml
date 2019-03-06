@@ -7,45 +7,47 @@
         mc:Ignorable="d"
         Title="{Binding Titel}" Height="230" Width="600">
 
-    <StackPanel Orientation="Vertical" Margin="10,10,0,0">
-        <StackPanel.Resources>
-            <Style TargetType="{x:Type TextBox}">
-                <Setter Property="Margin" Value="0,5,10,0"/>
-            </Style>
-        </StackPanel.Resources>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Vorname" Width="100"></Label>
-            <TextBox Text="{Binding Vorname}" Width="150"></TextBox>
-            <Label Content="Name" Width="100"></Label>
-            <TextBox Text="{Binding Name}" Width="150"></TextBox>
+    
+        <StackPanel Orientation="Vertical" Margin="10,10,0,0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Margin" Value="0,5,10,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Vorname" Width="100"></Label>
+                <TextBox Text="{Binding Vorname}" Width="150"></TextBox>
+                <Label Content="Name" Width="100"></Label>
+                <TextBox Text="{Binding Name}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Geb.-Datum" Width="100"></Label>
+                <!--<TextBox Text="{Binding Geburtsdatum}" Width="150"></TextBox>-->
+                <DatePicker SelectedDate="{Binding Geburtsdatum}" Width="150" Margin="0,5,10,0"></DatePicker>
+                <Label Content="Erwerbstätigkeit" Width="100"></Label>
+                <ComboBox SelectedItem="{Binding Auflistung}" ItemsSource="{Binding MyEnumTypeValues}" Width="150" Margin="0,5,10,0"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Beitritt" Width="100"></Label>
+                <DatePicker Width="150" Margin="0,5,10,0"></DatePicker>
+                <Label Content="Kontakt" Width="100"></Label>
+                <TextBox Text="{Binding Kontakt}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Straße" Width="100"></Label>
+                <TextBox Text="{Binding Strasse}" Width="150"></TextBox>
+                <Label Content="Hausnr" Width="100"></Label>
+                <TextBox Text="{Binding Hausnr}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PLZ" Width="100"></Label>
+                <TextBox Text="{Binding Plz}" Width="150"></TextBox>
+                <Label Content="Ort" Width="100"></Label>
+                <TextBox Text="{Binding Ort}" Width="150"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{StaticResource TextButton}" Command="{Binding Speichern}" Margin="350,15,5,0">Speichern</Button>
+                <Button Style="{StaticResource TextButton}" Command="{Binding Abbrechen}" Margin="0,15,5,0">Abbrechen</Button>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Geb.-Datum" Width="100"></Label>
-            <TextBox Text="{Binding Geburtsdatum}" Width="150"></TextBox>
-            <Label Content="Erwerbstätigkeit" Width="100"></Label>
-            <ComboBox SelectedItem="{Binding Auflistung}" ItemsSource="{Binding MyEnumTypeValues}" Width="150" Margin="0,5,10,0"></ComboBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Beitritt" Width="100"></Label>
-            <DatePicker Width="150" Margin="0,5,10,0"></DatePicker>
-            <Label Content="Kontakt" Width="100"></Label>
-            <TextBox Text="{Binding Kontakt}" Width="150"></TextBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Straße" Width="100"></Label>
-            <TextBox Text="{Binding Strasse}" Width="150"></TextBox>
-            <Label Content="Hausnr" Width="100"></Label>
-            <TextBox Text="{Binding Hausnr}" Width="150"></TextBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="PLZ" Width="100"></Label>
-            <TextBox Text="{Binding Plz}" Width="150"></TextBox>
-            <Label Content="Ort" Width="100"></Label>
-            <TextBox Text="{Binding Ort}" Width="150"></TextBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Button Command="{Binding Speichern}"  Margin="350,15,5,0">Speichern</Button>
-            <Button Margin="0,15,5,0">Abbrechen</Button>
-        </StackPanel>
-    </StackPanel>
-</Window>
+    </Window>
