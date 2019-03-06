@@ -5,34 +5,36 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"></ColumnDefinition>
-            <ColumnDefinition Width="5*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
+    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
 
-        <Border Background="{StaticResource HintergrundBasisBrush}" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
-        <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.ColumnSpan="3"></Border>
-        
-        <TextBox  Style="{StaticResource BasisTextBox}" Text="Suchen ... "  Grid.Column="0" Grid.Row="0" FontSize="18" ></TextBox>
-        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-            <Button Command="{Binding UserHinzufuegen}" Width="50" Margin="5" Background="Transparent">
-                <Image  Source="/Bilder/add-circle-512.png"></Image>
-            </Button>
-        </StackPanel>
+            <Border Background="{StaticResource HintergrundBasisBrush}" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
+            <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.ColumnSpan="3"></Border>
 
-        <ItemsControl Margin="5" ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical">
+            <TextBox  Style="{StaticResource BasisTextBox}" Text="Suchen ... "  Grid.Column="0" Grid.Row="0" FontSize="18" ></TextBox>
+            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <Button Command="{Binding UserHinzufuegen}" Width="50" Margin="5" Background="Transparent">
+                    <Image  Source="/Bilder/add-circle-512.png"></Image>
+                </Button>
+            </StackPanel>
 
-                    </StackPanel>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
-    </Grid> 
+            <ItemsControl Margin="5" ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical">
+
+                        </StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+    </ScrollViewer>
 </UserControl>
