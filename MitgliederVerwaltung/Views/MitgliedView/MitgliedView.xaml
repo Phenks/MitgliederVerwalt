@@ -26,7 +26,7 @@
         <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Geburtsdatum}" Grid.Row="0" Grid.Column="1" ></TextBlock>
         <TextBlock Style="{StaticResource BasisTextBlock}"  Text="{Binding Path=Email}" Grid.Row="0" Grid.Column="2" ></TextBlock>
         <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Mitgliedstatus}" Grid.Row="0" Grid.Column="3" ></TextBlock>
-        <TextBlock Style="{StaticResource BasisTextBlock}" Text="12.52 €" Grid.Row="0" Grid.Column="4" ></TextBlock>
+        <TextBlock Style="{StaticResource BasisTextBlock}" Text="{Binding Path=Beitrag}" Grid.Row="0" Grid.Column="4" ></TextBlock>
         <Button Command="{Binding Bearbeiten}"  Margin="0" Style="{StaticResource TextButton}" Content="Bearbeiten"  Grid.Row="0" Grid.Column="5" ></Button>
         <Button Margin="0" Style="{StaticResource TextButton}" Content="Info"  Grid.Row="0" Grid.Column="6" ></Button>
     </Grid>

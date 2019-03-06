@@ -10,6 +10,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
         public string Name { get; set; }
         public string Mitgliedstatus { get; set; }
         public DelegateCommand Bearbeiten { get; set; }
+        public string Beitrag { get; set; }
 
         private Mitglied _mitglied;
 
@@ -22,7 +23,7 @@ namespace MitgliederVerwaltung.Views.MitgliedView
             Email = mitglied.Email;
             Mitgliedstatus = mitglied.Aktiv ? "Aktiv" : "Inaktiv";
             Name = mitglied.VollstaendigerName;
-
+            Beitrag = $" {mitglied.Monatsbeitrag} €";
             Bearbeiten = new DelegateCommand((o => UserBearbeiten()));
         }
 
