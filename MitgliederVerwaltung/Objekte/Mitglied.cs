@@ -21,6 +21,8 @@ namespace MitgliederVerwaltung.Objekte
         public Konstanten.Erwerbstaetigkeiten Erwerbstaetigkeit { get; set; }
         public Konto Konto { get; set; }
         public int MitgliedId { get; set; }
+
+        public float Beitrag { get; set; }
         
 
         public Mitglied(string vorname, string nachname, DateTime geburtsdatum, Anschrift anschrift,
@@ -34,6 +36,35 @@ namespace MitgliederVerwaltung.Objekte
             Email = email;
             MitgliedId = NaechsteMitgliedId;
 
+        }
+
+        public float Monatsbeitrag
+        {
+            get
+            {
+                switch (Erwerbstaetigkeit)
+                {
+                    case Konstanten.Erwerbstaetigkeiten.Schueler:
+                        Beitrag = 5;
+                        break;
+                    case Konstanten.Erwerbstaetigkeiten.Student:
+                        Beitrag = 12;
+                        break;
+                    case Konstanten.Erwerbstaetigkeiten.Berufstaetig:
+                        Beitrag = 25;
+                        break;
+                    case Konstanten.Erwerbstaetigkeiten.Arbeitslos:
+                        Beitrag = 17;
+                        break;
+                    case Konstanten.Erwerbstaetigkeiten.Rentner:
+                        Beitrag = 15;
+                        break;
+                    default:
+                        Beitrag = 15;
+                        break;
+                }
+                return Beitrag;
+            }
         }
     }
 }
