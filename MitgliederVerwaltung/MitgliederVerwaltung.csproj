@@ -72,6 +72,7 @@
     <Compile Include="Basis\ViewModelBasis.cs" />
     <Compile Include="Objekte\Verein.cs" />
     <Compile Include="Services\MitgliederService.cs" />
+    <Compile Include="Services\SimulationsService.cs" />
     <Compile Include="Views\MitgliederansichtView\MitgliederUebersichtView.xaml.cs">
       <DependentUpon>MitgliederUebersichtView.xaml</DependentUpon>
     </Compile>

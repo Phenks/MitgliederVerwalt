@@ -1,22 +1,55 @@
-﻿using MitgliederVerwaltung.Basis;
-using DateTime = System.DateTime;
+﻿using System;
+using System.Data.SqlTypes;
+using MitgliederVerwaltung.Basis;
 
 namespace MitgliederVerwaltung.Views.SimulationView
 {
-    class SimulationViewModel : ViewModelBasis
+    internal class SimulationViewModel : ViewModelBasis
     {
-        private string _datum;
-        public string Datum
+        private string _momentanesDatum;
+
+        public string MomentanesDatum
         {
-            get { return _datum;}
-            set { SetProperty(ref _datum, value); }
+            get { return _momentanesDatum; }
+            set { SetProperty(ref _momentanesDatum, value); }
         }
+
+        private DateTime _datum;
+
+        public DelegateCommand MonatWeiter { get; set; }
+
+        public DelegateCommand TagWeiter { get; set; }
+        public DelegateCommand WocheWeiter { get; set; }
+
 
         public SimulationViewModel()
         {
-            var datum =new DateTime(2019,03,2);
-            Datum = datum.ToString("D");
+            TagWeiter = new DelegateCommand(o => OnTagWeiter());
+            WocheWeiter = new DelegateCommand(o => OnWocheWeiter());
+            MonatWeiter = new DelegateCommand(o => OnMonatWeiter());
+            DatumAendern(DateTime.Now);
         }
 
+        private void DatumAendern(DateTime neuesDatum)
+        {
+            _datum = neuesDatum;
+            MomentanesDatum = _datum.ToString("D");
+
+        }
+
+        public void OnTagWeiter()
+        {
+            DatumAendern(_datum.AddDays(1));
+        }
+
+        public void OnWocheWeiter()
+        {
+            DatumAendern(_datum.AddDays(7));
+        }
+
+        public void OnMonatWeiter()
+        {
+            DatumAendern(_datum.AddMonths(1));
+        }
     }
 }

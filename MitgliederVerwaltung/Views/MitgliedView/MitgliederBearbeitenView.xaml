@@ -21,7 +21,7 @@
                 <TextBox Text="{Binding Name}" Width="150"></TextBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Geb.-Datum" Width="100"></Label>
+                <Label Content="Geb.-MomentanesDatum" Width="100"></Label>
                 <!--<TextBox Text="{Binding Geburtsdatum}" Width="150"></TextBox>-->
                 <DatePicker SelectedDate="{Binding Geburtsdatum}" Width="150" Margin="0,5,10,0"></DatePicker>
                 <Label Content="Erwerbstätigkeit" Width="100"></Label>

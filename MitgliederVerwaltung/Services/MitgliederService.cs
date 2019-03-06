@@ -51,7 +51,6 @@ namespace MitgliederVerwaltung.Services
 
             OnMitgliederUpdated();
         }
-     
 
         private void InitialisiereMitglieder()
         {
