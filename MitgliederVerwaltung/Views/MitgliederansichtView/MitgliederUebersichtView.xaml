@@ -1,40 +1,40 @@
 ﻿<UserControl x:Class="MitgliederVerwaltung.Views.MitgliederansichtView.MitgliederUebersichtView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
-    <ScrollViewer HorizontalScrollBarVisibility="Hidden">
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"></ColumnDefinition>
-                <ColumnDefinition Width="5*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-            </Grid.RowDefinitions>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-            <Border Background="{StaticResource HintergrundBasisBrush}" Grid.RowSpan="2" Grid.ColumnSpan="3"></Border>
-            <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.ColumnSpan="3"></Border>
+        <Border Background="{StaticResource HintergrundBasisBrush}" Grid.RowSpan="2" Grid.ColumnSpan="3" />
+        <Border Background="{StaticResource HintergrundAkzentBrush}" Grid.ColumnSpan="3" />
 
-            <TextBox  Style="{StaticResource BasisTextBox}" Text="Suchen ... "  Grid.Column="0" Grid.Row="0" FontSize="18" ></TextBox>
-            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-                <Button Command="{Binding UserHinzufuegen}" Width="50" Margin="5" Background="Transparent">
-                    <Image  Source="/Bilder/add-circle-512.png"></Image>
-                </Button>
-            </StackPanel>
+        <TextBox Style="{StaticResource BasisTextBox}" Text="Suchen ... " Grid.Column="0" Grid.Row="0" FontSize="18" />
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+            <Button Command="{Binding UserHinzufuegen}" Width="50" Margin="5" Background="Transparent">
+                <Image Source="/Bilder/add-circle-512.png" />
+            </Button>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden" Grid.Row="1" Grid.Column="0"
+                      Grid.ColumnSpan="2">
 
-            <ItemsControl Margin="5" ItemsSource="{Binding Path=Mitglieder}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">
+            <ItemsControl Margin="5" ItemsSource="{Binding Path=Mitglieder}" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical">
-
-                        </StackPanel>
+                        <StackPanel Orientation="Vertical" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
-        </Grid>
-    </ScrollViewer>
+        </ScrollViewer>
+
+    </Grid>
 </UserControl>
