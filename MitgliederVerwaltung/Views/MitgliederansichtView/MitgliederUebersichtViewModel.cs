@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Services;
@@ -27,10 +28,19 @@ namespace MitgliederVerwaltung.Views.MitgliederansichtView
 
         public MitgliederUebersichtViewModel()
         {
+            MitgliederAktualisieren();   
+            MitgliederService.Instanz.MitgliederUpdated += MitgliederAktualisieren;
+
+            UserHinzufuegen = new DelegateCommand(o => OnUserHinzufuegenKlick());
+
+
+        }
+
+        public void MitgliederAktualisieren()
+        {
             Mitglieder = MitgliederService.Instanz.Mitglieder
                 .Select(mitglied => new MitgliedView.MitgliedView(new MitgliedViewModel(mitglied))).ToList();
 
-            UserHinzufuegen = new DelegateCommand(o => OnUserHinzufuegenKlick());
         }
 
         public void OnUserHinzufuegenKlick()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using MitgliederVerwaltung.Basis;
 using MitgliederVerwaltung.Objekte;
 
@@ -7,6 +8,10 @@ namespace MitgliederVerwaltung.Services
 {
     public class MitgliederService
     {
+        public delegate  void MitgliedHinzugefuegtEventHandler();
+
+        public event MitgliedHinzugefuegtEventHandler MitgliederUpdated;
+
         private static MitgliederService _instanz;
 
         public static MitgliederService Instanz
@@ -26,7 +31,27 @@ namespace MitgliederVerwaltung.Services
         public void FuegeMitgliedHinzu(Mitglied mitglied)
         {
             Mitglieder.Add(mitglied);
+            OnMitgliederUpdated();
         }
+
+        private void OnMitgliederUpdated()
+        {
+            MitgliederUpdated?.Invoke();
+        }
+
+        public void AktualisiereMitglied(Mitglied mitglied)
+        {
+            for (int i = 0; i < Mitglieder.Count; i++)
+            {
+                if (Mitglieder[i].MitgliedId == mitglied.MitgliedId)
+                {
+                    Mitglieder[i] = mitglied;
+                }
+            }
+
+            OnMitgliederUpdated();
+        }
+     
 
         private void InitialisiereMitglieder()
         {
@@ -137,4 +162,15 @@ namespace MitgliederVerwaltung.Services
             );
         }
     }
+
+    public class MitgliedEventArgs : EventArgs
+    {
+        public Mitglied Mitglied { get; set; }
+
+        public MitgliedEventArgs(Mitglied mitglied)
+        {
+            Mitglied = mitglied;
+        }
+    }
+
 }
