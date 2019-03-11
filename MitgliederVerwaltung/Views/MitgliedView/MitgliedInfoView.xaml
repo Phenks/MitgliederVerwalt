@@ -1,0 +1,61 @@
+﻿<Window x:Class="MitgliederVerwaltung.Views.MitgliedView.MitgliedInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MitgliederVerwaltung.Views.MitgliedView"
+        mc:Ignorable="d"
+        Title="Mitglied Info" Height="450" Width="600" MinWidth="550" MinHeight="450">
+
+    <StackPanel Orientation="Vertical" Margin="10,10,0,0">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Margin" Value="0,5,10,0"/>
+                <Setter Property="Width" Value="150"/>
+            </Style>
+        </StackPanel.Resources>
+        <Label Margin="10" Height="25" Content="Mitglied" FontSize="14" FontWeight="Bold"/>
+        <Label Margin="0,10,0,0" Content="Personenbezogene Daten" FontSize="12" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Vorname" Width="100"></Label>
+            <TextBox Text="{Binding Vorname}" IsReadOnly="True"></TextBox>
+            <Label Content="Name" Width="100"></Label>
+            <TextBox Text="{Binding Name}" IsReadOnly="True"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Geburtsdatum" Width="100"></Label>
+            <TextBox Text="{Binding Geburtsdatum}" IsReadOnly="true"></TextBox>
+            <Label Content="Erwerbstaetigkeit" Width="100"></Label>
+            <TextBox Text="{Binding Auflistung}" IsReadOnly="true"></TextBox>
+        </StackPanel>
+        <Label Margin="0,10,0,0" Content="Anschrift" FontSize="12" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Straße" Width="100"></Label>
+            <TextBox Text="{Binding Strasse}" IsReadOnly="true"></TextBox>
+            <Label Content="Hausnr" Width="100"></Label>
+            <TextBox Text="{Binding Hausnr}" IsReadOnly="true"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Plz" Width="100"></Label>
+            <TextBox Text="{Binding Plz}" IsReadOnly="true"></TextBox>
+            <Label Content="Ort" Width="100"></Label>
+            <TextBox Text="{Binding Ort}" IsReadOnly="true"></TextBox>
+        </StackPanel>
+        <Label Margin="0,10,0,0" Content="Mitgliedsbezogene Daten" FontSize="12" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Beitrittsdatum" Width="100"></Label>
+            <TextBox Text="{Binding Beitrittsdatum}" IsReadOnly="true"></TextBox>
+            <Label Content="E-Mail" Width="100"></Label>
+            <TextBox Text="{Binding Kontakt}" IsReadOnly="true"></TextBox>
+        </StackPanel>
+        <Label Margin="0,10,0,0" Content="Kontodaten" FontSize="12" FontWeight="Bold"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Kontonr" Width="100"></Label>
+            <TextBox Text="{Binding Kontonr}" IsReadOnly="true"></TextBox>
+            <Label Content="Kontostand" Width="100"></Label>
+            <TextBox Text="{Binding Kontostand}" IsReadOnly="true"></TextBox>
+        </StackPanel>
+        <Label Margin="10" Height="25" Content="Kontobewegungen" FontSize="14" FontWeight="Bold"/>
+        
+    </StackPanel>
+</Window>
